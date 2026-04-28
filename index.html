@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>🎬 Movie App</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="trending.html">Trending</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="about.html">About</a>
+    </div>
+</nav>
+
+<h1>Search Movies</h1>
+
+<input type="text" id="searchBox" placeholder="Enter movie name">
+<button onclick="searchMovie()">Search</button>
+
+<p id="loading" style="display:none;">Loading...</p>
+
+<div id="movieContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

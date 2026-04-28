@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>🎬 Movie App</h2>
+    <a href="index.html">Home</a>
+</nav>
+
+<h1>Contact Us</h1>
+
+<form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Name" required><br><br>
+    <input type="email" placeholder="Email" required><br><br>
+    <textarea placeholder="Message" required></textarea><br><br>
+    <button type="submit">Send</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function submitForm(e){
+    e.preventDefault();
+    document.getElementById("msg").innerText = "Message sent!";
+}
+</script>
+
+</body>
+</html>
