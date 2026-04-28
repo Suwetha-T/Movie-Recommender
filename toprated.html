@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Favorites</title>
+    <title>Top Rated Movies</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,16 +10,22 @@
     <h2>🎬 App</h2>
     <div>
         <a href="index.html">Home</a>
+        <a href="favorites.html">Favorites</a>
         <a href="contact.html">Contact</a>
+        <a href="toprated.html">Top Rated</a>
         <button onclick="logout()">Logout</button>
     </div>
 </nav>
 
-<h1>❤️ Favorites</h1>
-<div id="favorites"></div>
+<div class="main">
+    <h1>🏆 Top Rated Movies</h1>
+    <div id="topMovies"></div>
+</div>
 
 <script src="script.js"></script>
-<script>loadFavorites();</script>
+<script>
+    loadTopRated();
+</script>
 
 </body>
 </html>

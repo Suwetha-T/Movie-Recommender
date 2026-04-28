@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Movie App</title>
+    <title>Movie Recommendation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HERO -->
+<div class="hero">
+    <div class="overlay">
+        <h1>🎬 Movie Recommendation System</h1>
+        <p>Discover movies you'll love</p>
+    </div>
+</div>
+
+<!-- NAV -->
 <nav>
-    <h2>🎬 Movie App</h2>
+    <h2>🎬 App</h2>
     <div>
         <a href="index.html">Home</a>
         <a href="favorites.html">Favorites</a>
-        <a href="trending.html">Trending</a>
+        <a href="toprated.html">Top Rated</a>
         <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-        <a href="about.html">About</a>
+        <button onclick="logout()">Logout</button>
     </div>
 </nav>
 
-<h1>Search Movies</h1>
+<div class="main">
 
-<input type="text" id="searchBox" placeholder="Enter movie name">
-<button onclick="searchMovie()">Search</button>
+    <!-- SEARCH -->
+    <input type="text" id="searchBox" placeholder="Search movies...">
+    <button onclick="searchMovie()">Search</button>
 
-<p id="loading" style="display:none;">Loading...</p>
+    <!-- ROWS -->
+    <h2>🔍 Results</h2>
+    <div class="row" id="movieContainer"></div>
 
-<div id="movieContainer"></div>
+    <h2>🔥 Trending</h2>
+    <div class="row" id="trendingRow"></div>
+
+    <h2>🎭 Action</h2>
+    <div class="row" id="actionRow"></div>
+
+    <h2>❤️ Because You Liked</h2>
+    <div class="row" id="favRow"></div>
+
+    <!-- DETAILS -->
+    <h2>🎬 Movie Details</h2>
+    <div id="movieDetails"></div>
+
+</div>
 
 <script src="script.js"></script>
 </body>

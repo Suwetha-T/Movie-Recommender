@@ -6,29 +6,30 @@
 </head>
 <body>
 
-<nav>
-    <h2>🎬 Movie App</h2>
-    <a href="index.html">Home</a>
-</nav>
+<div class="hero login-hero">
+    <div class="overlay center-box">
+        <div class="login-box">
+            <h1>🎬 Movie Recommendation</h1>
 
-<h1>Login</h1>
+            <input type="text" id="user" placeholder="Username"><br><br>
+            <input type="password" id="pass" placeholder="Password"><br><br>
 
-<input type="text" id="user" placeholder="Username"><br><br>
-<input type="password" id="pass" placeholder="Password"><br><br>
-
-<button onclick="login()">Login</button>
-
-<p id="loginMsg"></p>
+            <button onclick="login()">Login</button>
+            <p id="loginMsg"></p>
+        </div>
+    </div>
+</div>
 
 <script>
 function login(){
-    let u = document.getElementById("user").value;
-    let p = document.getElementById("pass").value;
+    let u=document.getElementById("user").value;
+    let p=document.getElementById("pass").value;
 
     if(u==="admin" && p==="1234"){
-        document.getElementById("loginMsg").innerText="Success!";
+        localStorage.setItem("loggedIn","true");
+        window.location.href="index.html";
     } else {
-        document.getElementById("loginMsg").innerText="Wrong!";
+        document.getElementById("loginMsg").innerText="Invalid!";
     }
 }
 </script>

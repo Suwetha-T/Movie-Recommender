@@ -7,27 +7,32 @@
 <body>
 
 <nav>
-    <h2>🎬 Movie App</h2>
-    <a href="index.html">Home</a>
+    <h2>🎬 App</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="logout()">Logout</button>
+    </div>
 </nav>
 
-<h1>Contact Us</h1>
+<div class="main">
 
-<form onsubmit="submitForm(event)">
-    <input type="text" placeholder="Name" required><br><br>
-    <input type="email" placeholder="Email" required><br><br>
-    <textarea placeholder="Message" required></textarea><br><br>
-    <button type="submit">Send</button>
-</form>
+    <h1>📩 Contact Us</h1>
 
-<p id="msg"></p>
+    <div class="contact-box">
+        <form onsubmit="sendMessage(event)">
+            <input type="text" placeholder="Your Name" required><br><br>
+            <input type="email" placeholder="Your Email" required><br><br>
+            <textarea placeholder="Your Message" required></textarea><br><br>
+            <button type="submit">Send Message</button>
+        </form>
 
-<script>
-function submitForm(e){
-    e.preventDefault();
-    document.getElementById("msg").innerText = "Message sent!";
-}
-</script>
+        <p id="contactMsg"></p>
+    </div>
 
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
